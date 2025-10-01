@@ -7,21 +7,88 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Welcome!</h1>
+    <div class="container">
+      <header>
+        <h1>Cat knows best</h1>
+        <p>Your purrfect guide for today is...</p>
+      </header>
+      <main>
+        <!-- Selection screen -->
 
-    <footer>
-      This project was coded by
-      <a href="https://github.com/riinamii" target="_blank">Maryna Misiura</a>
-      and is
-      <a href="https://github.com/riinamii/quirky-gen" target="_blank">
-        open-sourced on GitHub
-      </a>
-      and
-      <a href="https://quirky-gen-ai.netlify.app/" target="_blank"
-        >hosted on Netlify</a
-      >
-    </footer>
+        <div class="selection-screen">
+          <div class="select-cats">
+            <div class="cat-card" id="frisky">
+              <img
+                src="img/happy.png"
+                alt="Frisky Expert"
+                height="150"
+                width="150"
+              />
+              <h3>Frisky Expert</h3>
+              <p>
+                Energetic, chaotic and enthusiastic! Gets exited about
+                EVERYTHING!
+              </p>
+            </div>
+            <div class="cat-card" id="unbothered">
+              <img
+                src="img/music.png"
+                alt="Nonchalant Guru"
+                height="150"
+                width="150"
+              />
+              <h3>Nonchalant Guru</h3>
+              <p>
+                Way too cool for this. Judgy, sassy, but secretly cares (just a
+                bit)
+              </p>
+            </div>
+            <div class="cat-card" id="sleepy">
+              <img
+                src="img/rest.png"
+                alt="Sleepy Sage"
+                height="150"
+                width="150"
+              />
+              <h3>Sleepy Sage</h3>
+              <p>
+                Wise but lazy. Will definitely help... after this nap... zzzz...
+              </p>
+            </div>
+          </div>
+        </div>
 
+        <!-- Chat screen -->
+
+        <div class="chat-screen">
+          <div class="selected-cat"></div>
+          <button>Change Cat</button>
+          <div class="message"></div>
+          <form>
+            <input
+              type="text"
+              placeholder="Paw your worries here..."
+              autofocus
+              required
+              autocomplete="off"
+            />
+            <button>Send</button>
+          </form>
+        </div>
+      </main>
+      <footer>
+        This project was coded by
+        <a href="https://github.com/riinamii" target="_blank">Maryna Misiura</a>
+        and is
+        <a href="https://github.com/riinamii/quirky-gen" target="_blank">
+          open-sourced on GitHub
+        </a>
+        and
+        <a href="https://quirky-gen-ai.netlify.app/" target="_blank"
+          >hosted on Netlify</a
+        >
+      </footer>
+    </div>
     <script src="src/index.js"></script>
   </body>
 </html>
