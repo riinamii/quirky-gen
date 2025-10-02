@@ -3,13 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="src/style.css" />
     <title>Document</title>
   </head>
   <body>
     <div class="container">
       <header>
-        <h1>Cat knows best</h1>
+        <h1>Cat Knows Best</h1>
         <p>Your purrfect guide for today is...</p>
       </header>
       <main>
@@ -61,34 +67,52 @@
         <!-- Chat screen -->
 
         <div class="chat-screen">
-          <div class="selected-cat"></div>
-          <button>Change Cat</button>
+          <div class="change-card">
+            <button class="change-button">Change Cat</button>
+          </div>
+          <div class="selected-cat-info">
+            <div class="selected-cat">
+              <span class="cat-icon"
+                ><img src="img/happy.png" alt="" height="200" width="200"
+              /></span>
+              <br />
+              <h3 class="cat-name">Frisky Expert</h3>
+            </div>
+            <div class="selected-cat-greeting">
+              <p>
+                OMG HI!!! I'M SO READY TO HELP YOU!!! Just tell me what do you
+                need?! I KNOW EVERYTHING! Well, I think I do... anyway... ASK
+                ME!!!
+              </p>
+            </div>
+          </div>
           <div class="message"></div>
           <form>
             <input
               type="text"
+              class="user-input"
               placeholder="Paw your worries here..."
               autofocus
               required
               autocomplete="off"
             />
-            <button>Send</button>
+            <button class="send-btn">Send</button>
           </form>
         </div>
       </main>
-      <footer>
-        This project was coded by
-        <a href="https://github.com/riinamii" target="_blank">Maryna Misiura</a>
-        and is
-        <a href="https://github.com/riinamii/quirky-gen" target="_blank">
-          open-sourced on GitHub
-        </a>
-        and
-        <a href="https://quirky-gen-ai.netlify.app/" target="_blank"
-          >hosted on Netlify</a
-        >
-      </footer>
     </div>
+    <footer>
+      This project was coded by
+      <a href="https://github.com/riinamii" target="_blank">Maryna Misiura</a>
+      and is
+      <a href="https://github.com/riinamii/quirky-gen" target="_blank">
+        open-sourced on GitHub
+      </a>
+      and
+      <a href="https://quirky-gen-ai.netlify.app/" target="_blank"
+        >hosted on Netlify</a
+      >
+    </footer>
     <script src="src/index.js"></script>
   </body>
 </html>
