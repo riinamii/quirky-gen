@@ -56,17 +56,29 @@ function displayChat(catType) {
   chatScreen.style.display = "block";
 }
 
-function generateAnswer(event) {
-  event.preventDefault();
-
+function displayAnswer(response) {
   message.innerHTML = "";
 
   new Typewriter("#message", {
-    strings: "YES YES YES I CAN HELP!!!",
+    strings: response.data.answer,
     autoStart: true,
     delay: 1,
     cursor: "",
   });
+}
+
+function generateAnswer(event) {
+  event.preventDefault();
+
+  let userMessage = userInput.value;
+  let chosenPersonality = currentCat.personality;
+
+  let prompt = userMessage;
+  let context = chosenPersonality;
+  let apiKey = "7f03aa8a08ac7784t49974b7b793o240";
+  let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+
+  axios.get(apiUrl).then(displayAnswer);
 }
 
 form.addEventListener("submit", generateAnswer);
@@ -79,4 +91,5 @@ changeBtn.addEventListener("click", () => {
   selectionScreen.style.display = "block";
   chatScreen.style.display = "none";
   currentCat = null;
+  userInput.value = "";
 });
