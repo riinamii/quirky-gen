@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Document</title>
   </head>
@@ -16,14 +17,14 @@
     <div class="container">
       <header>
         <h1>Cat Knows Best</h1>
-        <p>Your purrfect guide for today is...</p>
       </header>
       <main>
         <!-- Selection screen -->
 
-        <div class="selection-screen">
+        <div class="selection-screen" id="selectionScreen">
+          <p class="guide">Your purrfect guide for today is...</p>
           <div class="select-cats">
-            <div class="cat-card" id="frisky">
+            <div class="cat-card" id="friskyCard">
               <img
                 src="img/happy.png"
                 alt="Frisky Expert"
@@ -36,7 +37,7 @@
                 EVERYTHING!
               </p>
             </div>
-            <div class="cat-card" id="unbothered">
+            <div class="cat-card" id="nonchalantCard">
               <img
                 src="img/music.png"
                 alt="Nonchalant Guru"
@@ -49,7 +50,7 @@
                 bit)
               </p>
             </div>
-            <div class="cat-card" id="sleepy">
+            <div class="cat-card" id="sleepyCard">
               <img
                 src="img/rest.png"
                 alt="Sleepy Sage"
@@ -66,24 +67,17 @@
 
         <!-- Chat screen -->
 
-        <div class="chat-screen">
+        <div class="chat-screen" id="chatScreen">
           <div class="change-card">
-            <button class="change-button">Change Cat</button>
+            <button class="change-button" id="changeBtn">Change Cat</button>
           </div>
           <div class="selected-cat-info">
             <div class="selected-cat">
-              <span class="cat-icon"
-                ><img src="img/happy.png" alt="" height="200" width="200"
-              /></span>
-              <br />
-              <h3 class="cat-name">Frisky Expert</h3>
+              <img src="" alt="" id="catIcon" />
+              <h3 class="cat-name" id="catName"></h3>
             </div>
             <div class="selected-cat-greeting">
-              <p>
-                OMG HI!!! I'M SO READY TO HELP YOU!!! Just tell me what do you
-                need?! I KNOW EVERYTHING! Well, I think I do... anyway... ASK
-                ME!!!
-              </p>
+              <p id="message"></p>
             </div>
           </div>
           <div class="message"></div>
@@ -91,12 +85,13 @@
             <input
               type="text"
               class="user-input"
+              id="userInput"
               placeholder="Paw your worries here..."
               autofocus
               required
               autocomplete="off"
             />
-            <button class="send-btn">Send</button>
+            <input type="submit" class="send-btn" id="sendBtn" value="Send" />
           </form>
         </div>
       </main>

@@ -16,13 +16,11 @@ body {
   color: #2d2b38;
 }
 
-header {
+.guide {
+  font-size: 18px;
   text-align: center;
 }
 
-header p {
-  font-size: 18px;
-}
 h1,
 h3 {
   font-family: "Fredoka", sans-serif;
@@ -62,6 +60,7 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  display: none;
 }
 
 .selected-cat-info {
@@ -80,6 +79,9 @@ h3.cat-name {
   padding: 20px;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  width: 600px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .selected-cat-greeting p {
@@ -108,6 +110,11 @@ h3.cat-name {
 .change-button:hover {
   background: #5c4b8a;
   color: #ffffff;
+}
+
+.selected-cat img {
+  width: 200px;
+  height: 200px;
 }
 
 form {
