@@ -48,6 +48,7 @@ let catName = document.querySelector("#catName");
 let message = document.querySelector("#message");
 let userInput = document.querySelector("#userInput");
 let sendBtn = document.querySelector("#sendBtn");
+let themeBtn = document.querySelector("#theme-toggle");
 
 function displayChat(catType) {
   currentCat = cats[catType];
@@ -91,6 +92,11 @@ function generateAnswer(event, customPrompt) {
   axios.get(apiUrl).then(displayAnswer);
 }
 
+function changeTheme() {
+  let body = document.querySelector("body");
+  body.classList.toggle("dark");
+}
+
 form.addEventListener("submit", generateAnswer);
 
 friskyCard.addEventListener("click", () => displayChat("frisky"));
@@ -111,3 +117,5 @@ document.querySelectorAll(".prompt-btn").forEach((button) => {
     if (promptText) generateAnswer(null, promptText);
   });
 });
+
+themeBtn.addEventListener("click", changeTheme);
