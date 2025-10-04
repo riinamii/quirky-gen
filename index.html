@@ -69,31 +69,43 @@
         <!-- Chat screen -->
 
         <div class="chat-screen" id="chatScreen">
-          <div class="change-card">
-            <button class="change-button" id="changeBtn">Change Cat</button>
-          </div>
-          <div class="selected-cat-info">
-            <div class="selected-cat">
-              <img src="" alt="" id="catIcon" />
-              <h3 class="cat-name" id="catName"></h3>
+          <div class="system">
+            <div class="change-card">
+              <button class="change-button" id="changeBtn">Change Cat</button>
             </div>
-            <div class="selected-cat-greeting">
-              <p id="message"></p>
+            <div class="selected-cat-info">
+              <div class="selected-cat">
+                <img src="" alt="" id="catIcon" />
+                <h3 class="cat-name" id="catName"></h3>
+              </div>
+              <div class="selected-cat-greeting">
+                <p id="message"></p>
+              </div>
+            </div>
+            <div class="message"></div>
+          </div>
+          <div class="user">
+            <form>
+              <input
+                type="text"
+                class="user-input"
+                id="userInput"
+                placeholder="Paw your worries here..."
+                autofocus
+                required
+                autocomplete="off"
+              />
+              <input type="submit" class="send-btn" id="sendBtn" value="Send" />
+            </form>
+            <div class="quick-prompts">
+              <div class="prompt-buttons">
+                <button class="prompt-btn" id="code">💻 Code Wisdom</button>
+                <button class="prompt-btn" id="life">🍀 Life Advice</button>
+                <button class="prompt-btn" id="study">🎓 Study Tips</button>
+                <button class="prompt-btn" id="fun">😸 Fun Time</button>
+              </div>
             </div>
           </div>
-          <div class="message"></div>
-          <form>
-            <input
-              type="text"
-              class="user-input"
-              id="userInput"
-              placeholder="Paw your worries here..."
-              autofocus
-              required
-              autocomplete="off"
-            />
-            <input type="submit" class="send-btn" id="sendBtn" value="Send" />
-          </form>
         </div>
       </main>
     </div>
