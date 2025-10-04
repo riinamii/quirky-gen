@@ -14,7 +14,6 @@ Cat icons used in this project are from [Flaticon](https://www.flaticon.com/):
 
 - Created by [Xinh Studio](https://www.flaticon.com/authors/xinh-studio)
 - Icon pack: [Muop the Cat](https://www.flaticon.com/packs/muop-the-cat)
-- License: Flaticon License - Free for personal and commercial purpose with attribution
 
 ## 👩‍💻 Author
 
@@ -25,4 +24,4 @@ Cat icons used in this project are from [Flaticon](https://www.flaticon.com/):
 
 ---
 
-Made with 💜 and lots of ☕
+Made with 💜 and lots of 🍵
